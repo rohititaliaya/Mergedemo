@@ -18,3 +18,10 @@ Route::get('/', function () {
 });
 
 // i am from branch xy
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+Route::post('/get', [App\Http\Controllers\HomeController::class, 'getenv']);
